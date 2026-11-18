@@ -191,3 +191,66 @@ button:active {
 .result.error #status {
     color: #c62828;
 }
+
+/* Company Branding Header */
+
+.company-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.company-header h2 {
+    color: #17365d;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.company-subtitle {
+    color: #64748b;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.brand-line {
+    width: 55px;
+    height: 3px;
+    background: #1976d2;
+    margin: 14px auto 0;
+    border-radius: 5px;
+}
+
+/* Company Footer */
+
+.company-footer {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.footer-line {
+    height: 1px;
+    background: #e2e8f0;
+    margin-bottom: 15px;
+}
+
+.company-footer p {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.company-footer strong {
+    display: block;
+    font-size: 11px;
+    color: #17365d;
+}
+
+.company-footer span {
+    display: block;
+    font-size: 10px;
+    color: #999;
+    margin-top: 7px;
+    letter-spacing: 1px;
+}

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Voltage Divider Calculator</title>
+    <title>Voltage Divider Calculator | Planet Spark Technology</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,13 +15,22 @@
 
     <div class="container">
 
+        <!-- Company Branding -->
+        <header class="company-header">
+            <h2>PLANETSPARK</h2>
+            <p class="company-subtitle">
+                TECHNOLOGY PRIVATE LIMITED
+            </p>
+            <div class="brand-line"></div>
+        </header>
+
+        <!-- Calculator Heading -->
         <h1>Voltage Divider Calculator</h1>
 
-        <p>Calculate your output voltage easily</p>
+       
 
         <!-- Input Voltage -->
         <label for="vin">Input Voltage (Vin)</label>
-
         <input
             type="number"
             id="vin"
@@ -34,7 +43,6 @@
         <label for="r1">Resistor R1 (Upper)</label>
 
         <div class="resistor-input">
-
             <input
                 type="number"
                 id="r1"
@@ -48,14 +56,12 @@
                 <option value="1000" selected>kΩ</option>
                 <option value="1000000">MΩ</option>
             </select>
-
         </div>
 
         <!-- Resistor R2 -->
         <label for="r2">Resistor R2 (Lower)</label>
 
         <div class="resistor-input">
-
             <input
                 type="number"
                 id="r2"
@@ -69,7 +75,6 @@
                 <option value="1000" selected>kΩ</option>
                 <option value="1000000">MΩ</option>
             </select>
-
         </div>
 
         <!-- Calculate Button -->
@@ -80,21 +85,23 @@
         <!-- Calculation Result -->
         <div class="result">
 
-           
-<!-- Calculation Result -->
-<div class="result">
+            <div id="status">Ready to calculate</div>
 
-    <div id="status">Ready to calculate</div>
+            <h2>Output Voltage (Vout)</h2>
 
-    <h2>Output Voltage (Vout)</h2>
+            <h1 id="vout">0.000 V</h1>
 
-    <h1 id="vout">0.000 V</h1>
-
-    <p id="power">Current and power: --</p>
-
-</div>
+            <p id="power">Current and power: --</p>
 
         </div>
+
+        <!-- Company Footer -->
+        <footer class="company-footer">
+            <div class="footer-line"></div>
+            <p>Designed & Developed by</p>
+            <strong>Planetspark Technology Private Limited</strong>
+            <span>Engineering Tools</span>
+        </footer>
 
     </div>
 
