@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voltage Divider Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Voltage Divider Calculator</h1>
+
+        <p>Calculate your output voltage easily</p>
+
+        <!-- Input Voltage -->
+        <label for="vin">Input Voltage (Vin)</label>
+
+        <input
+            type="number"
+            id="vin"
+            placeholder="Enter input voltage"
+            min="0"
+            step="any"
+        >
+
+        <!-- Resistor R1 -->
+        <label for="r1">Resistor R1 (Upper)</label>
+
+        <div class="resistor-input">
+
+            <input
+                type="number"
+                id="r1"
+                placeholder="Enter R1"
+                min="0"
+                step="any"
+            >
+
+            <select id="r1Unit">
+                <option value="1">Ω</option>
+                <option value="1000" selected>kΩ</option>
+                <option value="1000000">MΩ</option>
+            </select>
+
+        </div>
+
+        <!-- Resistor R2 -->
+        <label for="r2">Resistor R2 (Lower)</label>
+
+        <div class="resistor-input">
+
+            <input
+                type="number"
+                id="r2"
+                placeholder="Enter R2"
+                min="0"
+                step="any"
+            >
+
+            <select id="r2Unit">
+                <option value="1">Ω</option>
+                <option value="1000" selected>kΩ</option>
+                <option value="1000000">MΩ</option>
+            </select>
+
+        </div>
+
+        <!-- Calculate Button -->
+        <button onclick="calculateVoltage()">
+            Calculate
+        </button>
+
+        <!-- Calculation Result -->
+        <div class="result">
+
+           
+<!-- Calculation Result -->
+<div class="result">
+
+    <div id="status">Ready to calculate</div>
+
+    <h2>Output Voltage (Vout)</h2>
+
+    <h1 id="vout">0.000 V</h1>
+
+    <p id="power">Current and power: --</p>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

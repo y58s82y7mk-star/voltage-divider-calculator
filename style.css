@@ -1,0 +1,193 @@
+
+/* =================================
+   VOLTAGE DIVIDER CALCULATOR
+   Main Styling
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.container h1 {
+    color: #17365d;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    text-align: center;
+    color: #777777;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Labels */
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Input Fields */
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd4df;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: #ffffff;
+}
+
+input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+/* Resistor Input + Unit Selector */
+
+.resistor-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.resistor-input input {
+    flex: 1;
+    min-width: 0;
+}
+
+.resistor-input select {
+    width: 105px;
+    padding: 13px 8px;
+    border: 1px solid #ccd4df;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #f8fafc;
+    cursor: pointer;
+    outline: none;
+}
+
+.resistor-input select:focus {
+    border-color: #1976d2;
+}
+
+/* Calculate Button */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 28px;
+    background: #1976d2;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #125ca5;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+/* Result Section */
+
+.result {
+    margin-top: 25px;
+    padding: 22px;
+    background: #edf5ff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result h2 {
+    color: #444444;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.result h1 {
+    color: #087443;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.result p {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 22px;
+    }
+
+    .container h1 {
+        font-size: 21px;
+    }
+
+    .resistor-input select {
+        width: 95px;
+    }
+}
+
+/* Calculation Status */
+
+#status {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.result.success {
+    border: 1px solid #a5dfc0;
+    background: #effaf4;
+}
+
+.result.error {
+    border: 1px solid #f1b5b5;
+    background: #fff1f1;
+}
+
+.result.error #status {
+    color: #c62828;
+}
