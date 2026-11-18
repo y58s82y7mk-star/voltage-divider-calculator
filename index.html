@@ -1,111 +1,129 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Voltage Divider Calculator | Planet Spark Technology</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Company Branding -->
-        <header class="company-header">
-            <h2>PLANETSPARK</h2>
-            <p class="company-subtitle">
-                TECHNOLOGY PRIVATE LIMITED
-            </p>
-            <div class="brand-line"></div>
-        </header>
+    <!-- Company Branding -->
+    <header class="company-header">
+        <h2>PLANET SPARK</h2>
+        <p class="company-subtitle">
+            TECHNOLOGY PRIVATE LIMITED
+        </p>
+        <div class="brand-line"></div>
+    </header>
 
-        <!-- Calculator Heading -->
-        <h1>Voltage Divider Calculator</h1>
+    <!-- Calculator Heading -->
+    <h1>Voltage Divider Calculator</h1>
 
-       
+    <p class="instruction">
+        Enter any three known values and press Calculate
+        to solve for the other.
+    </p>
 
-        <!-- Input Voltage -->
-        <label for="vin">Input Voltage (Vin)</label>
-        <input
-            type="number"
-            id="vin"
-            placeholder="Enter input voltage"
-            min="0"
-            step="any"
-        >
+    <!-- Input Voltage -->
+    <div class="field-group" id="vinGroup">
+        <label for="vin">Voltage Source (Vin)</label>
+        <div class="input-row">
+            <input
+                type="number"
+                id="vin"
+                placeholder="Source voltage"
+                min="0"
+                step="any"
+            >
+            <span class="unit-label">Volts (V)</span>
+        </div>
+    </div>
 
-        <!-- Resistor R1 -->
-        <label for="r1">Resistor R1 (Upper)</label>
-
-        <div class="resistor-input">
+    <!-- Resistor R1 -->
+    <div class="field-group" id="r1Group">
+        <label for="r1">Resistance 1 (R1)</label>
+        <div class="input-row">
             <input
                 type="number"
                 id="r1"
-                placeholder="Enter R1"
+                placeholder="Resistance 1"
                 min="0"
                 step="any"
             >
 
             <select id="r1Unit">
-                <option value="1">Ω</option>
-                <option value="1000" selected>kΩ</option>
-                <option value="1000000">MΩ</option>
+                <option value="1">Ohms (Ω)</option>
+                <option value="1000" selected>Kilo-ohms (kΩ)</option>
+                <option value="1000000">Megaohms (MΩ)</option>
             </select>
         </div>
+    </div>
 
-        <!-- Resistor R2 -->
-        <label for="r2">Resistor R2 (Lower)</label>
-
-        <div class="resistor-input">
+    <!-- Resistor R2 -->
+    <div class="field-group" id="r2Group">
+        <label for="r2">Resistance 2 (R2)</label>
+        <div class="input-row">
             <input
                 type="number"
                 id="r2"
-                placeholder="Enter R2"
+                placeholder="Resistance 2"
                 min="0"
                 step="any"
             >
 
             <select id="r2Unit">
-                <option value="1">Ω</option>
-                <option value="1000" selected>kΩ</option>
-                <option value="1000000">MΩ</option>
+                <option value="1">Ohms (Ω)</option>
+                <option value="1000" selected>Kilo-ohms (kΩ)</option>
+                <option value="1000000">Megaohms (MΩ)</option>
             </select>
         </div>
-
-        <!-- Calculate Button -->
-        <button onclick="calculateVoltage()">
-            Calculate
-        </button>
-
-        <!-- Calculation Result -->
-        <div class="result">
-
-            <div id="status">Ready to calculate</div>
-
-            <h2>Output Voltage (Vout)</h2>
-
-            <h1 id="vout">0.000 V</h1>
-
-            <p id="power">Current and power: --</p>
-
-        </div>
-
-        <!-- Company Footer -->
-        <footer class="company-footer">
-            <div class="footer-line"></div>
-            <p>Designed & Developed by</p>
-            <strong>Planetspark Technology Private Limited</strong>
-            <span>Engineering Tools</span>
-        </footer>
-
     </div>
 
-    <script src="script.js"></script>
+    <!-- Output Voltage -->
+    <div class="field-group" id="voutGroup">
+        <label for="vout">Output Voltage (Vout)</label>
+        <div class="input-row">
+            <input
+                type="number"
+                id="vout"
+                placeholder="Output voltage"
+                min="0"
+                step="any"
+            >
+            <span class="unit-label">Volts (V)</span>
+        </div>
+    </div>
+
+    <!-- Calculate Button -->
+    <button type="button" id="calculateBtn">
+        Calculate
+    </button>
+
+    <!-- Calculation Status -->
+    <div class="result">
+        <div id="status">Ready to calculate</div>
+        <p id="details">
+            Enter any three values to calculate the fourth.
+        </p>
+    </div>
+
+    <!-- Company Footer -->
+    <footer class="company-footer">
+        <div class="footer-line"></div>
+        <p>Designed &amp; Developed by</p>
+        <strong>Planet Spark Technology Private Limited</strong>
+        <span>ENGINEERING TOOLS</span>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

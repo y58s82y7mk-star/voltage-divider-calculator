@@ -1,8 +1,8 @@
 
-/* =================================
+/* ======================================
+   PLANET SPARK TECHNOLOGY
    VOLTAGE DIVIDER CALCULATOR
-   Main Styling
-================================= */
+====================================== */
 
 * {
     margin: 0;
@@ -24,175 +24,14 @@ body {
 
 .container {
     width: 100%;
-    max-width: 450px;
+    max-width: 600px;
     background: #ffffff;
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
-.container h1 {
-    color: #17365d;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.container > p {
-    text-align: center;
-    color: #777777;
-    margin-bottom: 25px;
-    font-size: 14px;
-}
-
-/* Labels */
-
-label {
-    display: block;
-    font-weight: 600;
-    color: #333333;
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-/* Input Fields */
-
-input {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #ccd4df;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-    background: #ffffff;
-}
-
-input:focus {
-    border-color: #1976d2;
-    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
-}
-
-/* Resistor Input + Unit Selector */
-
-.resistor-input {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.resistor-input input {
-    flex: 1;
-    min-width: 0;
-}
-
-.resistor-input select {
-    width: 105px;
-    padding: 13px 8px;
-    border: 1px solid #ccd4df;
-    border-radius: 8px;
-    font-size: 15px;
-    background: #f8fafc;
-    cursor: pointer;
-    outline: none;
-}
-
-.resistor-input select:focus {
-    border-color: #1976d2;
-}
-
-/* Calculate Button */
-
-button {
-    width: 100%;
-    padding: 14px;
-    margin-top: 28px;
-    background: #1976d2;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #125ca5;
-}
-
-button:active {
-    transform: scale(0.99);
-}
-
-/* Result Section */
-
-.result {
-    margin-top: 25px;
-    padding: 22px;
-    background: #edf5ff;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.result h2 {
-    color: #444444;
-    font-size: 16px;
-    margin-bottom: 12px;
-}
-
-.result h1 {
-    color: #087443;
-    font-size: 30px;
-    margin-bottom: 12px;
-}
-
-.result p {
-    color: #555555;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-/* Mobile Responsive */
-
-@media (max-width: 480px) {
-    .container {
-        padding: 22px;
-    }
-
-    .container h1 {
-        font-size: 21px;
-    }
-
-    .resistor-input select {
-        width: 95px;
-    }
-}
-
-/* Calculation Status */
-
-#status {
-    font-size: 13px;
-    font-weight: bold;
-    color: #1976d2;
-    margin-bottom: 15px;
-}
-
-.result.success {
-    border: 1px solid #a5dfc0;
-    background: #effaf4;
-}
-
-.result.error {
-    border: 1px solid #f1b5b5;
-    background: #fff1f1;
-}
-
-.result.error #status {
-    color: #c62828;
-}
-
-/* Company Branding Header */
+/* Company Branding */
 
 .company-header {
     text-align: center;
@@ -201,7 +40,7 @@ button:active {
 
 .company-header h2 {
     color: #17365d;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: 1.5px;
 }
@@ -222,7 +61,159 @@ button:active {
     border-radius: 5px;
 }
 
-/* Company Footer */
+/* Heading */
+
+.container > h1 {
+    color: #17365d;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.instruction {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Input Fields */
+
+.field-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+input,
+select {
+    height: 46px;
+    border: 1px solid #ccd4df;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: #ffffff;
+    color: #333333;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 15px;
+}
+
+select {
+    width: 180px;
+    padding: 10px;
+    cursor: pointer;
+    background: #f8fafc;
+}
+
+input:focus,
+select:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25,118,210,0.10);
+}
+
+.unit-label {
+    width: 180px;
+    padding: 12px 10px;
+    color: #475569;
+    font-size: 14px;
+}
+
+/* Calculated Field Highlight */
+
+.field-group.calculated input {
+    border: 2px solid #ff8c00;
+    background: #fffaf2;
+    box-shadow: 0 0 0 3px rgba(255,140,0,0.10);
+}
+
+.field-group.calculated label {
+    color: #d97706;
+}
+
+/* Calculate Button */
+
+button {
+    width: 100%;
+    height: 46px;
+    margin-top: 8px;
+    background: #1976d2;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #125ca5;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+/* Status Section */
+
+.result {
+    margin-top: 22px;
+    padding: 16px;
+    background: #edf5ff;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+#status {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 8px;
+}
+
+.result p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.result.success {
+    background: #effaf4;
+    border-color: #a5dfc0;
+}
+
+.result.success #status {
+    color: #087443;
+}
+
+.result.error {
+    background: #fff1f1;
+    border-color: #f1b5b5;
+}
+
+.result.error #status {
+    color: #c62828;
+}
+
+/* Footer */
 
 .company-footer {
     text-align: center;
@@ -237,7 +228,7 @@ button:active {
 
 .company-footer p {
     font-size: 11px;
-    color: #888;
+    color: #888888;
     margin-bottom: 5px;
 }
 
@@ -250,7 +241,41 @@ button:active {
 .company-footer span {
     display: block;
     font-size: 10px;
-    color: #999;
+    color: #999999;
     margin-top: 7px;
     letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 22px 18px;
+    }
+
+    .container > h1 {
+        font-size: 21px;
+    }
+
+    .input-row {
+        gap: 7px;
+    }
+
+    select,
+    .unit-label {
+        width: 125px;
+        flex-shrink: 0;
+        font-size: 12px;
+        padding-left: 7px;
+    }
+
+    input {
+        font-size: 14px;
+    }
 }
